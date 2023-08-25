@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+   <div class="border rounded p-4 m-4">
+        <p class="display-4 pl-4 ml-4">Your Product</p>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>desc</th>
+                    <th>Price</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for product in products %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td><img style="height: 80px;" class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1AdBzKzN1LHAre2t2p06pDJukgId90M0RIw&usqp=CAU" alt=""></td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.desc}}</td>
+                    <td>{{product.price}}</td>
+                </tr>
+                {% endfor %} 
+            </tbody>
+        </table>
+   </div>
+   <form action="/checkout" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn float-right btn-outline-success col-lg-6" value="Check out">
+    </form>
+</div>
+
+
+
+
+
+{% endblock %}
