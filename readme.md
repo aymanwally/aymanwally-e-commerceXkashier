@@ -29,5 +29,13 @@ If you haven't install requests library
 And then run the `manage.py` command to start the new project:
 
     $ python manage.py runserver
+
+### creating virtualenv
+installing the virtual environment
+
+    $ pip install virtualenv
+
+create a new virtual environment named env
       
-      
+    $ python -m venv env 
+
