@@ -7,21 +7,16 @@ this project written with django 4 and python 3.
 
 ### Main features
 
-* Separated dev and production settings
-
-* Example app with custom user model
-
-* Bootstrap static files included
-
-* Procfile for easy deployments
-
-* Separated requirements files
-
-* SQLite by default if no env variable is set
+- Django Admin Ecommerce
+- Kashier Payment Method Simulator
+- Easy navigation
+- Checkout page
+- reciept redirection
 
 # Usage
+The System is created to simulate a transcation using Kashier Payment method, Where one static product was is created on a backend level, where by choosing the product it fetches the payment URL, and simulates a transaction and then it updates the status on the backend. 
 
-To test Kashir integration with Django Based E-commerce 
+In case the transaction was declined, the system will send an invoice to the customer an invoice with the number in the billing data. 
 
 ### Existing virtualenv
 
